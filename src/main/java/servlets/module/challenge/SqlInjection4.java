@@ -97,8 +97,7 @@ public class SqlInjection4 extends HttpServlet {
         stmt.setString(1, theUserName);
         stmt.setString(2, thePassword);
         log.debug("Gathering result set");
-        ResultSet resultSet =
-            stmt.executeQuery();
+        ResultSet resultSet = stmt.executeQuery();
 
         int i = 0;
         htmlOutput = "<h2 class='title'>" + bundle.getString("response.loginResults") + "</h2>";

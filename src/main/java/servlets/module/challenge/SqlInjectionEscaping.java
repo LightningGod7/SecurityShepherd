@@ -87,8 +87,7 @@ public class SqlInjectionEscaping extends HttpServlet {
             conn.prepareStatement("SELECT * FROM customers WHERE customerId = ?");
         stmt.setString(1, aUserId);
         log.debug("Gathering result set");
-        ResultSet resultSet =
-            stmt.executeQuery();
+        ResultSet resultSet = stmt.executeQuery();
 
         int i = 0;
         htmlOutput = "<h2 class='title'>" + bundle.getString("response.searchResults") + "</h2>";
